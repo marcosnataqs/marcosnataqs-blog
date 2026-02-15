@@ -1,0 +1,63 @@
+---
+const currentYear = new Date().getFullYear();
+const socialLinks = [
+  { label: 'GitHub', href: 'https://github.com/marcosnataqs' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/marcosnataqs' },
+  { label: 'X', href: 'https://x.com/marcosnataqs' },
+];
+---
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; {currentYear} Marcos Natã Santos. All rights reserved.</p>
+    <ul class="social-links">
+      {socialLinks.map((link) => (
+        <li>
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: 4rem;
+    padding: 1.5rem 0 2.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-content p {
+    color: var(--color-text-muted);
+    font-size: 0.82rem;
+    margin: 0;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .social-links a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.82rem;
+  }
+
+  .social-links a:hover {
+    color: var(--color-text);
+  }
+</style>
