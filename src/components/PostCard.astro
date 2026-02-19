@@ -5,9 +5,10 @@ interface Props {
   pubDate: string;
   slug: string;
   tags?: string[];
+  readingTime?: string;
 }
 
-const { title, description, pubDate, slug, tags } = Astro.props;
+const { title, description, pubDate, slug, tags, readingTime } = Astro.props;
 const formattedDate = new Date(pubDate).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'short',
@@ -17,7 +18,7 @@ const formattedDate = new Date(pubDate).toLocaleDateString('en-US', {
 
 <article class="post-card">
   <a href={`/blog/${slug}`}>
-    <time datetime={pubDate}>{formattedDate}</time>
+    <time datetime={pubDate}>{formattedDate}{readingTime && <span class="reading-time">&nbsp;&middot;&nbsp;{readingTime}</span>}</time>
     <h3>{title}</h3>
     <p>{description}</p>
     {tags && (

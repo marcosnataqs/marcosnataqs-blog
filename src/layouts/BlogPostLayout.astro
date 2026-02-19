@@ -7,6 +7,7 @@ interface Props {
     description: string;
     pubDate: string;
     tags?: string[];
+    readingTime?: string;
   };
 }
 
@@ -27,6 +28,9 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', 
       <h1>{frontmatter.title}</h1>
       <p class="post-meta">
         <time datetime={frontmatter.pubDate}>{formattedDate}</time>
+        {frontmatter.readingTime && (
+          <span class="reading-time">&nbsp;&middot;&nbsp;{frontmatter.readingTime}</span>
+        )}
       </p>
       {frontmatter.tags && (
         <div class="tags">
