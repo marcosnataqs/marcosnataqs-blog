@@ -43,6 +43,20 @@ The simple architecture paid off. Better models could operate more efficiently i
 
 Other well-known AI products like Claude Code and Manus AI have rewritten their architectures four or five times for the same reasons. This is not just my experience. It's the reality of this market.
 
+### The real data problem
+
+Another thing that hit me hard was how differently the agent behaved with real data versus test data.
+
+During development, everything looked great. I would run tests with synthetic data, confirm the agent was doing what it was supposed to do, and move on. But the moment I plugged it into real production data, the agent would take a completely different route. Different decisions, different outputs, different behavior.
+
+That broke my brain for a while.
+
+In traditional software, what you test during development is what you get in production. That's the whole point of testing. But with agents, that rule just doesn't hold. Real data is messy, unpredictable, and full of edge cases that no synthetic dataset can replicate. The model reacts to all of that in ways you can't fully anticipate.
+
+So something that was completely unacceptable in my old world — tweaking software after it hits production — became the new normal. We had to build refinement sessions into our process. Every time we plugged the agent into real data, we would sit down, observe how it behaved, and adjust. It wasn't a bug. It was the process.
+
+That was a real paradigm shift for me. You can't just ship and forget. With agents, production *is* part of development.
+
 ### What "Survival Mode" means
 
 Building AI agents is fundamentally about survival.
@@ -63,15 +77,19 @@ We lost several deals because of this. The market wasn't ready, and honestly, th
 
 ### The moment it almost died
 
-At some point, leadership wanted to pause the project. The fear of the unknown, the deals not closing, the pressure to focus on other things that made more money right now.
+At some point, we had a serious conversation about stopping the project. Deals weren't closing, the market was uncertain, and there were other priorities that needed attention. It was a fair discussion.
 
-I pushed back hard. I told them we had to keep going. I could see the potential. After a lot of back and forth, the project survived.
+But I really believed in the potential of what we were building. So we talked it through, and in the end, we decided to keep going.
 
 For over a year, it felt like we were failing. But looking back, we weren't failing. We were learning. And more importantly, we were surviving the market cycle.
 
 ### The payoff
 
-The company ended up being acquired by a larger one. And during that transition, we closed our first real deal — a major player in the US real estate market.
+We worked our asses off for almost a year to close our first client. But it was a big player in the vertical, and that made all the difference.
+
+This client understood something that most didn't: delivering real value through agents is not about buying a chat platform. It's about partnering. Working together to solve the hard problems. And that's exactly where the structured data problem comes in — all these chat platforms out there won't solve it. You can't just throw a chatbot on top of messy data and call it a day.
+
+That experience taught me something else too. I realized that to really deliver value, we had to act like Forward Deployed Engineers — engineers who work directly alongside the client, embedded in their environment, solving problems in real time. We couldn't just ship the agent and walk away. We had to be in the trenches with the client, refining the experience, customizing the behavior, making sure the agent actually worked with *their* data and *their* workflows.
 
 That moment proved the thesis: **staying alive in this market pays off.**
 
