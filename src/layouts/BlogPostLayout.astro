@@ -7,6 +7,7 @@ interface Props {
     description: string;
     pubDate: string;
     tags?: string[];
+    image?: string;
     readingTime?: string;
   };
 }
@@ -19,7 +20,14 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', 
 });
 ---
 
-<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+<BaseLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  type="article"
+  publishedTime={frontmatter.pubDate}
+  tags={frontmatter.tags}
+>
   <div class="reading-progress" aria-hidden="true">
     <div class="reading-progress__bar"></div>
   </div>
