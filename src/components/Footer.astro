@@ -4,6 +4,7 @@ const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/marcosnataqs' },
   { label: 'LinkedIn', href: 'https://linkedin.com/in/marcosnataqs' },
   { label: 'X', href: 'https://x.com/marcosnataqs' },
+  { label: 'RSS', href: '/rss.xml' },
 ];
 ---
 
@@ -13,7 +14,7 @@ const socialLinks = [
     <ul class="social-links">
       {socialLinks.map((link) => (
         <li>
-          <a href={link.href} target="_blank" rel="noopener noreferrer">
+          <a href={link.href} {...(link.href.startsWith('/') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}>
             {link.label}
           </a>
         </li>
