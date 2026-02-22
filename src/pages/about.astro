@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About - Marcos Natã Santos" description="A bit about me, my background, and what I'm up to.">
+  <section class="about">
+    <div class="about-header">
+      <img src="/profile.jpeg" alt="Marcos Natã Santos" class="about-photo" width="120" height="120" />
+      <div>
+        <h1>About me</h1>
+        <p class="tagline">Software engineer, AI enthusiast, from Brazil.</p>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <p>
+        Hey! I'm Marcos. I'm a software engineer with over 10 years
+        of experience building things for the web. These days I spend most of my time
+        working with AI and leading engineering teams.
+      </p>
+
+      <p>
+        I'm currently leading teams building an agent platform for financial and professional services. Before that,
+        I built AI tools to help real estate agents work smarter.
+      </p>
+
+      <p>
+        Over the years I've worked across the full stack -- front-end, back-end, DevOps,
+        mobile apps, ERP systems -- you name it. I've been a tech lead, a co-founder, and
+        even a professor teaching AI to developers. I like wearing different hats.
+      </p>
+
+      <h2>This blog</h2>
+
+      <p>
+        This is my little corner of the internet where I write about software, AI, and
+        whatever else is on my mind. Nothing too formal -- just sharing things I find
+        interesting or useful.
+      </p>
+
+      <div class="links">
+        <a href="https://github.com/marcosnataqs" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="separator">/</span>
+        <a href="https://www.linkedin.com/in/marcosnataqs" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span class="separator">/</span>
+        <a href="https://x.com/marcosnataqs" target="_blank" rel="noopener noreferrer">X</a>
+        <span class="separator">/</span>
+        <a href="/blog">Blog</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about {
+    padding: 1rem 0 2rem;
+  }
+
+  .about-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 3px solid var(--color-border);
+  }
+
+  .about-header h1 {
+    margin: 0 0 0.25rem;
+  }
+
+  .tagline {
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  .about-content p {
+    font-size: 1.02rem;
+    line-height: 1.8;
+  }
+
+  .about-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-content strong {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .links {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  .separator {
+    margin: 0 0.35rem;
+  }
+
+  @media (max-width: 520px) {
+    .about-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .about-photo {
+      width: 90px;
+      height: 90px;
+    }
+  }
+</style>
